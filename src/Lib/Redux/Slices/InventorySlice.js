@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   data: [
     {
+        id: 1,
         title: "Grilled Salmon",
         description: "Grilled salmon served with lemon and herbs.",
         picture: "https://images.pexels.com/photos/3763847/pexels-photo-3763847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -10,6 +11,7 @@ const initialState = {
         status: 'available'
       },
       {
+        id: 2,
         title: "Fish Tacos",
         description: "Delicious fish tacos topped with salsa and avocado.",
         picture: "https://images.pexels.com/photos/4078054/pexels-photo-4078054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -17,6 +19,7 @@ const initialState = {
         status: 'available'
       },
       {
+        id: 3,
         title: "Seafood Paella",
         description: "Traditional Spanish seafood paella with shrimp, mussels, and squid.",
         picture: "https://images.pexels.com/photos/4078054/pexels-photo-4078054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -25,13 +28,14 @@ const initialState = {
       }
   ],
 };
-
 export const inventorySlice = createSlice({
   name: 'inventory',
   initialState,
   reducers: {
     addProduct: (state, action) => {
-      state.products.push(action.payload);
+      const id = state.products.length + 1;
+      const newProduct = { ...action.payload, id };
+      state.products.push(newProduct);
     },
     updateProduct: (state, action) => {
       const { id, updatedProduct } = action.payload;
