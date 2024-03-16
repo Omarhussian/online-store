@@ -1,6 +1,5 @@
 import React from 'react';
 import { List } from 'antd';
-import Naruto from '../../Assets/naruto.jpg';
 
 const ListComponent = () => {
   const data = [
@@ -43,7 +42,7 @@ const ListComponent = () => {
               <button className='border-[#000000] border w-28 hover:bg-black hover:text-white transition duration-300 ease-linear transform '>ADD TO CART</button>
             </div>
             <div>
-              <span>{'$' + item.price.toFixed(2)}</span> {/* Format price with double decimal digits */}
+              <span>{'$' + item.price.toFixed(2)}</span>
             </div>
           </div>
         </List.Item>
