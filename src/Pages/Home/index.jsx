@@ -4,7 +4,7 @@ import Cart from '../../Components/PageSpecific/Home/Cart'
 import Inventory from '../../Components/PageSpecific/Home/Inventory'
 const Home = () => {
   return (
-    <div className=' h-screen grid grid-cols-3 justify-center items-center p-2  '>
+    <div className='h-screen grid grid-cols-3 justify-center items-center p-2'>
       <div>
         <ProductsList />
       </div>
@@ -14,7 +14,6 @@ const Home = () => {
       <div>
         <Inventory />
       </div>
-
     </div>
   )
 }
