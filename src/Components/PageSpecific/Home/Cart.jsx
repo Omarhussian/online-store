@@ -24,8 +24,9 @@ const Cart = () => {
           </li>
         ))}
       </ul>
-      <div className="border-b-4 border-[#000000] w-full flex justify-start p-4">
-        <span>Total:</span> <span>${totalPrice.toFixed(2)}</span>
+      <div className="border-b-4 border-[#000000] w-full flex justify-between p-4">
+        <span>Total:</span>
+        <span>${totalPrice.toFixed(2)}</span>
       </div>
     </div>
   );
