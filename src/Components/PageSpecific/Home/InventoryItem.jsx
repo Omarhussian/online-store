@@ -20,16 +20,27 @@ const InventoryItem = ({ product }) => {
     return (
         <div className='border-4 border-[#000000] w-full h-44 overflow-hidden'>
             <div className='flex  w-full justify-center items-start'>
-                <Input placeholder='Name' className=' border border-[#000000] rounded-none p-[10px]' value={product.title} readOnly />
-                <Input placeholder='Price' className=' border border-[#000000] rounded-none  p-[10px]' value={product.price} readOnly />
+                <Input placeholder='Name' className=' border border-[#000000] rounded-none p-[10px]' value={product.title} onChange={(e) => {
+                    dispatch(updateProduct({
+                        id: product.id,
+                        updatedProduct: { ...product, title: e.target.value }
+                    }));
+                }} />
+                <Input placeholder='Price' className=' border border-[#000000] rounded-none  p-[10px]' value={product.price} onChange={(e) => {
+                    dispatch(updateProduct({
+                        id: product.id,
+                        updatedProduct: { ...product, price: +e.target.value }
+                    }));
+                }} />
                 <Dropdown 
-                
-                overlay={
-                    <Menu onClick={handleMenuClick}>
-                        <Menu.Item key="Available">Available</Menu.Item>
-                        <Menu.Item key="Unavailable">Unavailable</Menu.Item>
-                    </Menu>
-                } placement='bottomCenter'>
+                    overlay={
+                        <Menu onClick={handleMenuClick}>
+                            <Menu.Item key="Available">Available</Menu.Item>
+                            <Menu.Item key="Unavailable">Unavailable</Menu.Item>
+                        </Menu>
+                    } 
+                    placement='bottomCenter'
+                >
                     <Input
                         placeholder={selectedStatus}
                         className=' border border-[#000000] cursor-pointer rounded-none p-[10px] '

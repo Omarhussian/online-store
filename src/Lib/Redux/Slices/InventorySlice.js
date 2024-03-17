@@ -33,15 +33,15 @@ export const inventorySlice = createSlice({
   initialState,
   reducers: {
     addProduct: (state, action) => {
-      const id = state.products.length + 1;
+      const id = state.data.length + 1; 
       const newProduct = { ...action.payload, id };
-      state.products.push(newProduct);
+      state.data.push(newProduct);
     },
     updateProduct: (state, action) => {
       const { id, updatedProduct } = action.payload;
-      const index = state.products.findIndex(product => product.id === id);
+      const index = state.data.findIndex(product => product.id === id); 
       if (index !== -1) {
-        state.products[index] = updatedProduct;
+        state.data[index] = updatedProduct; 
       }
     },
   },

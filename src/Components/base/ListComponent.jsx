@@ -7,7 +7,7 @@ import { addToCart } from '../../Lib/Redux/Slices/CartSlice';
 const ListComponent = () => {
   const data = useSelector(state => state.inventory.data);
   const dispatch = useDispatch();
-  
+  console.log('price' , data.price)
   return (
     <List
       itemLayout="horizontal"
