@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../../Lib/Redux/Slices/CartSlice';
 import UnAvailable from './UnAvailable';
 import styles from '../../Lib/Helpers/animations.module.scss'
-
+import TitleStyles from '../PageSpecific/Home/Home.module.scss'
 
 const ListComponent = () => {
 

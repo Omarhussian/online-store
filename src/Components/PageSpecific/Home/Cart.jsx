@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import UnAvailable from '../../base/UnAvailable';
+import styles from './Home.module.scss'
 
 const Cart = () => {
   const {items} = useSelector(state => state.CartSlice);
@@ -9,7 +9,7 @@ const Cart = () => {
 
   return (
     <div className="flex h-screen flex-col justify-start items-center  p-4 border-4 border-[#000000] border-double">
-      <h2 className="font-bold text-lg">Shopping Cart</h2>
+      <h2 className={styles.MenuTitles}>Shopping Cart</h2>
       <ul className='w-full'>
         {items.map((item, index) => (
           <li key={index} className='flex justify-between w-full p-4 border-b-4 border-[#000000] border-double'>
