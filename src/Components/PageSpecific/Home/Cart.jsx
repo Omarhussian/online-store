@@ -8,7 +8,7 @@ const Cart = () => {
   const totalPrice = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
-    <div className="flex h-screen flex-col justify-start items-center  p-4 border-4 border-[#000000] border-double">
+    <div className="flex h-screen flex-col justify-start items-center overflow-y-auto  p-4 border-4 border-[#000000] border-double">
       <h2 className={styles.MenuTitles}>Shopping Cart</h2>
       <ul className='w-full'>
         {items.map((item, index) => (
