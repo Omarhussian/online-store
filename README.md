@@ -45,6 +45,8 @@ This documentation provides an overview of the fish store task completed using R
 - Ant Design Dropdown component is customized to include a down arrow icon and open on click.
 - Event handlers are implemented to capture user input and update the Redux store with product changes.
 
+### Font Usage Clarification
+It's important to note that the fonts used in the design were originally paid fonts. However, to maintain compliance and accessibility, similar free fonts available from Google Fonts were utilized in the implementation of the Fish Store application. The chosen fonts were selected based on their resemblance to the paid fonts used in the design, ensuring a consistent and visually appealing user experience.
 
 Follow these steps to run the Fish Store application locally:
 
