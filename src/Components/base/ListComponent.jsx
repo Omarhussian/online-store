@@ -13,11 +13,11 @@ const ListComponent = () => {
       itemLayout="horizontal"
       dataSource={data}
       renderItem={(item, index) => (
-        <List.Item className='!border-none !p-[2px]' style={{ position: 'relative' }}>
+        <List.Item className='!border-none !p-[2px] overflow-hidden relative'>
           {item.status === 'Unavailable' && (
             <div className={styles['unavailable-animation']}
-             style={{ position: 'absolute', top:80, left: 150, }}
-             >
+              style={{ position: 'absolute', top: 80, left: 150, bottom:30 }}
+            >
               <UnAvailable />
             </div>
           )}
@@ -25,11 +25,11 @@ const ListComponent = () => {
             <div>
               <img src={item.picture} className='h-28 w-32 object-cover' alt={item.title} />
             </div>
-            <div className='w-[60%] flex flex-col gap-1 items-start'>
-              <span className='font-bold text-lg'>{item.title}</span>
-              <span>{item.description}</span>
+            <div className='w-[50%] flex flex-col gap-1 items-start'>
+              <span className='font-bold text-lg line-clamp-2 w-[90%]' title={item.title} >{item.title}</span>
+              <span title={item.description} className='line-clamp-2 break-words'>{item.description}</span>
               {item.status === 'Available' && (
-                <button 
+                <button
                   className='border-[#000000] border w-28 hover:bg-black hover:text-white transition duration-300 ease-linear transform '
                   onClick={() => dispatch(addToCart(item))}
                 >
