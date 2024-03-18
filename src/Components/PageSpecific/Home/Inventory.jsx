@@ -1,10 +1,12 @@
 import React from 'react'
 import InventoryItem from './InventoryItem'
+import AddToInventory from './AddToInventory';
 import { useSelector } from 'react-redux';
+
 const Inventory = () => {
   const data = useSelector(state => state.inventory.data);
   return (
-    <div className='flex h-screen flex-col justify-start items-center p-4 border-4 border-[#000000] border-double'>
+    <div className='flex h-screen flex-col gap-y-4 justify-start items-center p-4 border-4 border-[#000000] border-double overflow-y-auto'>
       {/* Title */}
       <div>
         <span className='text-2xl font-bold'>Inventory</span>
@@ -13,6 +15,9 @@ const Inventory = () => {
         {data.map(product => (
           <InventoryItem key={product.id} product={product} />
         ))}
+      </div>
+      <div>
+        <AddToInventory />
       </div>
     </div>
   )
