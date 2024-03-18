@@ -46,3 +46,30 @@ This documentation provides an overview of the fish store task completed using R
 - Event handlers are implemented to capture user input and update the Redux store with product changes.
 
 
+Follow these steps to run the Fish Store application locally:
+
+1. **Clone the Repository**: 
+   - Open a terminal window and navigate to the directory where you want to clone the repository.
+   - Run the following command to clone the repository:
+     ```
+     git clone <repository-url>
+     ```
+
+2. **Install Dependencies**:
+   - Navigate into the cloned repository directory using the terminal.
+   - Run the following command to install the necessary dependencies using yarn:
+     ```
+     yarn install
+     ```
+
+3. **Start the Application**:
+   - After installing the dependencies, run the following command to start the application:
+     ```
+     yarn start
+     ```
+
+4. **View the Application**:
+   - Once the application has started successfully, open a web browser and navigate to `http://localhost:3000` to view the Fish Store application.
+
+5. **Interact with the Application**:
+   - You can now interact with the application by adding items to the cart, viewing the inventory, and managing products.
