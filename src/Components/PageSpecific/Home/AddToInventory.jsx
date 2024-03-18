@@ -6,6 +6,7 @@ import { addProduct } from '../../../Lib/Redux/Slices/InventorySlice';
 const { TextArea } = Input;
 
 const AddToInventory = () => {
+    
     const dispatch = useDispatch();
     const [formData, setFormData] = useState({
         title: '',
