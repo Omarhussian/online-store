@@ -3,6 +3,7 @@ import ProductsList from '../../Components/PageSpecific/Home/ProductsList'
 import Cart from '../../Components/PageSpecific/Home/Cart'
 import Inventory from '../../Components/PageSpecific/Home/Inventory'
 
+
 const Home = () => {
 
   return (
@@ -13,7 +14,7 @@ const Home = () => {
       <div >
         <Cart />
       </div>
-      <div className='w-full' >
+      <div  >
         <Inventory />
       </div>
     </div>
