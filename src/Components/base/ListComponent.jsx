@@ -8,6 +8,7 @@ import Image from '../../Assets/placeholders/image.png'
 
 
 const ListComponent = () => {
+  // here i get inventory data from Redux store
 
   const  {data}  = useSelector(state => state.InventorySlice);
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const ListComponent = () => {
     <List
       itemLayout="horizontal"
       dataSource={data}
+      // here i render each item in the inventory list
       renderItem={(item, index) => (
         <List.Item className='!border-none !p-[2px] overflow-hidden relative'>
           {item.status === 'Unavailable' && (
