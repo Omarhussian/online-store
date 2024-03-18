@@ -5,9 +5,9 @@ import { addToCart } from '../../Lib/Redux/Slices/CartSlice';
 import UnAvailable from './UnAvailable';
 import styles from '../../Lib/Helpers/animations.module.scss'
 const ListComponent = () => {
-  const data = useSelector(state => state.inventory.data);
+  const  {data}  = useSelector(state => state.InventorySlice);
   const dispatch = useDispatch();
-
+  console.log("first" , data)
   return (
     <List
       itemLayout="horizontal"

@@ -4,7 +4,7 @@ import AddToInventory from './AddToInventory';
 import { useSelector } from 'react-redux';
 
 const Inventory = () => {
-  const data = useSelector(state => state.inventory.data);
+  const { data } = useSelector(state => state.InventorySlice);
   return (
     <div className='flex h-screen flex-col gap-y-4 justify-start items-center p-4 border-4 border-[#000000] border-double overflow-y-auto'>
       {/* Title */}

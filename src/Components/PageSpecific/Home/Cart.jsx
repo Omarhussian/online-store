@@ -3,15 +3,15 @@ import { useSelector } from 'react-redux';
 import UnAvailable from '../../base/UnAvailable';
 
 const Cart = () => {
-  const cartItems = useSelector(state => state.cart.items);
+  const {items} = useSelector(state => state.CartSlice);
 
-  const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  const totalPrice = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
     <div className="flex h-screen flex-col justify-start items-center  p-4 border-4 border-[#000000] border-double">
       <h2 className="font-bold text-lg">Shopping Cart</h2>
       <ul className='w-full'>
-        {cartItems.map((item, index) => (
+        {items.map((item, index) => (
           <li key={index} className='flex justify-between w-full p-4 border-b-4 border-[#000000] border-double'>
             <React.Fragment className='flex justify-start'>
               <span className='w-[20%]'>
