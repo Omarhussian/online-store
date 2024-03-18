@@ -62,19 +62,19 @@ const AddToInventory = () => {
             <div className='flex flex-col'>
                 <TextArea
                     placeholder='Description'
-                    className='p-4 border border-[#000000] rounded-none'
+                    className='p-2 border border-[#000000] rounded-none'
                     autoSize={{ minRows: 2, maxRows: 6 }}
                     value={formData.description}
                     onChange={(e) => handleInputChange(e, 'description')}
                 />
                 <Input
                     placeholder='Image URL'
-                    className='p-4 border border-[#000000] rounded-none'
+                    className='border pb-2  border-[#000000] rounded-none'
                     value={formData.picture}
                     onChange={(e) => handleInputChange(e, 'picture')}
                 />
             </div>
-            <button onClick={handleAddProduct} className='border-[#000000] border w-28 hover:bg-black hover:text-white transition duration-300 ease-linear transform'>ADD</button>
+            <button onClick={handleAddProduct} className='border-[#000000] border w-full hover:bg-black hover:text-white transition duration-300 ease-linear transform'>ADD FISH</button>
         </div>
     );
 };

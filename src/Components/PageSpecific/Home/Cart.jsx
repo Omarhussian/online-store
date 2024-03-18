@@ -7,7 +7,7 @@ const Cart = () => {
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
-    <div className="flex h-screen flex-col justify-start items-center p-4 border-4 border-[#000000] border-double">
+    <div className="flex h-screen flex-col justify-start items-center  p-4 border-4 border-[#000000] border-double">
       <h2 className="font-bold text-lg">Shopping Cart</h2>
       <ul className='w-full'>
         {cartItems.map((item, index) => (

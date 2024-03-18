@@ -64,7 +64,7 @@ const InventoryItem = ({ product }) => {
                 />
                 <Input
                     placeholder='Image URL'
-                    className='p-4 border border-[#000000] rounded-none'
+                    className='p-3 border border-[#000000] rounded-none'
                     value={product.picture}
                     onChange={(e) => {
                         dispatch(updateProduct({
