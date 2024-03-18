@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../../Lib/Redux/Slices/CartSlice';
 import UnAvailable from './UnAvailable';
 import styles from '../../Lib/Helpers/animations.module.scss'
-import TitleStyles from '../PageSpecific/Home/Home.module.scss'
+import Image from '../../Assets/placeholders/image.png'
+
 
 const ListComponent = () => {
 
@@ -26,7 +27,7 @@ const ListComponent = () => {
           )}
           <div className='w-full flex gap-2 justify-evenly border-b-2 border-t border-[#000000] p-4'>
             <div>
-              <img src={item.picture} className='h-28 w-32 object-cover' alt={item.title} />
+              <img src={item.picture} className='h-28 w-32 object-cover' alt={item.title} onError={(e) => { e.target.src = Image }} />
             </div>
             <div className='w-[50%] flex flex-col gap-1 items-start'>
               <span className='font-bold text-lg line-clamp-2 w-[90%]' title={item.title} >{item.title}</span>
