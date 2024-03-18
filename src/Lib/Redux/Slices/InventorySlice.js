@@ -8,7 +8,7 @@ const initialState = {
         description: "Grilled salmon served with lemon and herbs.",
         picture: "https://images.pexels.com/photos/3763847/pexels-photo-3763847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         price: 14.99,
-        status: 'available'
+        status: 'Available'
       },
       {
         id: 2,
@@ -16,7 +16,7 @@ const initialState = {
         description: "Delicious fish tacos topped with salsa and avocado.",
         picture: "https://images.pexels.com/photos/4078054/pexels-photo-4078054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         price: 10.99,
-        status: 'available'
+        status: 'Available'
       },
       {
         id: 3,
@@ -24,7 +24,7 @@ const initialState = {
         description: "Traditional Spanish seafood paella with shrimp, mussels, and squid.",
         picture: "https://images.pexels.com/photos/4078054/pexels-photo-4078054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         price: 18.99,
-        status: 'available'
+        status: 'Available'
       }
   ],
 };

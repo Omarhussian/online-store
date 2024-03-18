@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import UnAvailable from '../../base/UnAvailable';
 
 const Cart = () => {
   const cartItems = useSelector(state => state.cart.items);
