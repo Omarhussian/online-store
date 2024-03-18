@@ -52,7 +52,7 @@ Follow these steps to run the Fish Store application locally:
    - Open a terminal window and navigate to the directory where you want to clone the repository.
    - Run the following command to clone the repository:
      ```
-     git clone <repository-url>
+     git clone https://github.com/Omarhussian/online-store.git
      ```
 
 2. **Install Dependencies**:
