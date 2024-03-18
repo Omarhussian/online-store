@@ -9,6 +9,7 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
+    // here are reducer function for adding items in the cart 
     addToCart: (state, action) => {
       const { id } = action.payload;
       const existingItem = state.items.find(item => item.id === id);
