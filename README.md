@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Fish Store Task Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+This documentation provides an overview of the fish store task completed using React, Redux, and Ant Design,tailwindcss . The task involved creating a web application for fish store items, allowing users to view, edit, and update product details.
 
-## Available Scripts
+## Technologies Used
+- React
+- Redux
+- Ant Design
+- TailWindCss
 
-In the project directory, you can run:
+## Components Overview
 
-### `npm start`
+### InventoryItem
+- Responsible for displaying and updating individual inventory items.
+- Includes input fields for editing product details (name, price, description).
+- Utilizes a dropdown menu for changing product status (available/unavailable).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ListComponent
+  - This component is responsible for rendering the Products of the Fish Store application from redux.
+  - Utilizes Ant Design's List component to display inventory items.
+  - Allows users to view product details such as name, price, description, and image.
+  - Provides functionality to add available products to the cart.
+  - Includes animations for indicating unavailable products.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### UnAvailable
+- Animated component for handling unavailable items, providing a visual indicator.
 
-### `npm test`
+### Cart Component
+  - The `Cart` component displays the items added to the shopping cart in the Fish Store application.
+  - Calculates the total price of all items in the cart.
+  - Renders a list of items in the cart with their quantities and prices.
+  - Displays the total price of all items in the cart.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Functionality Overview
+- Users can view a list of inventory items with their details.
+- Editable input fields allow users to update product information (name, price, description).
+- A dropdown menu enables users to change the status of products (available/unavailable).
+- Redux is used to manage state and handle updates, ensuring data consistency across components.
+- Ant Design components are integrated and customized for a consistent and user-friendly interface.
+- Utilizes Redux Persist to save the app data in the local storage, ensuring persistence of app state across sessions.
 
-### `npm run build`
+## Implementation Details
+- Redux actions and reducers are used to handle state updates and manage product data.
+- Ant Design Dropdown component is customized to include a down arrow icon and open on click.
+- Event handlers are implemented to capture user input and update the Redux store with product changes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
