@@ -40,7 +40,7 @@ const InventoryItem = ({ product }) => {
                         updatedProduct: { ...product, price: +e.target.value }
                     }));
                 }} />
-                <Dropdown overlay={menu} trigger={['click']} placement='bottomCenter' className='cursor-pointer'>
+                <Dropdown overlay={menu} trigger={['click']} placement='bottom' className='cursor-pointer'>
                     <Input
                         placeholder={selectedStatus}
                         className='border border-[#000000] cursor-pointer rounded-none p-[10px]'
